@@ -1,0 +1,283 @@
+[
+  {
+    "id": "pm-kisan",
+    "badge": "Central Govt",
+    "category": "Financial Support",
+    "name": {
+      "en": "PM Kisan Samman Nidhi Yojana",
+      "hi": "प्रधानमंत्री किसान सम्मान निधि योजना",
+      "pa": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਕਿਸਾਨ ਸਨਮਾਨ ਨਿਧੀ ਯੋਜਨਾ",
+      "mr": "पंतप्रधान किसान सन्मान निधी योजना"
+    },
+    "summary": {
+      "en": "Direct income support of ₹6,000 per year transferred in 3 equal instalments of ₹2,000 into farmers' bank accounts.",
+      "hi": "सभी पात्र किसान परिवारों को प्रति वर्ष ₹6,000 की वित्तीय सहायता, ₹2,000 की तीन समान किस्तों में सीधे बैंक खाते में।",
+      "pa": "ਸਾਰੇ ਯੋਗ ਕਿਸਾਨ ਪਰਿਵਾਰਾਂ ਨੂੰ ਹਰ ਸਾਲ ₹6,000 ਦੀ ਵਿੱਤੀ ਸਹਾਇਤਾ, 3 ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਸਿੱਧਾ ਬੈਂਕ ਖਾਤੇ ਵਿੱਚ।",
+      "mr": "सर्व पात्र शेतकरी कुटुंबांना दरवर्षी ₹६,००० चे थेट आर्थिक सहाय्य, प्रत्येकी ₹२,००० च्या ३ हप्त्यांमध्ये बँक खात्यात."
+    },
+    "benefits": {
+      "en": [
+        "₹6,000 annually guaranteed direct benefit transfer (DBT)",
+        "Zero middleman intervention directly linked with Aadhaar",
+        "Helps purchase quality seeds, fertilizers and cover early sowing costs"
+      ],
+      "hi": [
+        "सालाना ₹6,000 की सुनिश्चित आर्थिक सहायता (प्रत्यक्ष लाभ अंतरण)",
+        "बिना किसी बिचौलिए के सीधे आधार से जुड़े बैंक खाते में पैसा",
+        "बीज, खाद और बुवाई के खर्चों को पूरा करने में मददगार"
+      ],
+      "pa": [
+        "ਸਾਲਾਨਾ ₹6,000 ਦੀ ਸਿੱਧੀ ਵਿੱਤੀ ਸਹਾਇਤਾ (DBT)",
+        "ਕੋਈ ਵਿਚੋਲਾ ਨਹੀਂ, ਸਿੱਧਾ ਆਧਾਰ ਨਾਲ ਜੁੜੇ ਬੈਂਕ ਖਾਤੇ ਵਿੱਚ ਪੈਸਾ",
+        "ਬੀਜ, ਖਾਦ ਅਤੇ ਵਾਹੀ ਦੇ ਸ਼ੁਰੂਆਤੀ ਖਰਚਿਆਂ ਲਈ ਮਦਦਗਾਰ"
+      ],
+      "mr": [
+        "वार्षिक ₹६,००० चे हमी थेट लाभ हस्तांतरण (DBT)",
+        "कोणत्याही मध्यस्थाशिवाय थेट आधार लिंक केलेल्या बँक खात्यात",
+        "बियाणे, खते आणि पेरणीच्या खर्चासाठी उपयुक्त"
+      ]
+    },
+    "eligibility": {
+      "en": [
+        "Small and marginal landholding farmer families",
+        "Valid land ownership records in the name of the farmer",
+        "Active bank account linked with Aadhaar & eKYC completed"
+      ],
+      "hi": [
+        "छोटे और सीमांत किसान परिवार",
+        "किसान के नाम पर खेती योग्य वैध भूमि रिकॉर्ड",
+        "आधार से जुड़ा सक्रिय बैंक खाता और e-KYC पूर्ण"
+      ],
+      "pa": [
+        "ਛੋਟੇ ਅਤੇ ਦਰਮਿਆਨੇ ਕਿਸਾਨ ਪਰਿਵਾਰ",
+        "ਕਿਸਾਨ ਦੇ ਨਾਮ 'ਤੇ ਜ਼ਮੀਨ ਦਾ ਕਾਨੂੰਨੀ ਰਿਕਾਰਡ",
+        "ਆਧਾਰ ਲਿੰਕਡ ਬੈਂਕ ਖਾਤਾ ਅਤੇ e-KYC ਪੂਰੀ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ"
+      ],
+      "mr": [
+        "अल्प व अत्यल्प भूधारक शेतकरी कुटुंबे",
+        "शेतकऱ्याच्या नावावर शेतीयोग्य जमिनीची वैध नोंद",
+        "आधारशी लिंक केलेले सक्रिय बँक खाते आणि ई-केवायसी पूर्ण"
+      ]
+    },
+    "documents": {
+      "en": ["Aadhaar Card", "Land Khatauni / Jamabandi", "Bank Passbook with IFSC", "Active Mobile Number"],
+      "hi": ["आधार कार्ड", "जमीन की खतौनी / जमाबंदी", "बैंक पासबुक (IFSC कोड सहित)", "सक्रिय मोबाइल नंबर"],
+      "pa": ["ਆਧਾਰ ਕਾਰਡ", "ਜ਼ਮੀਨ ਦੀ ਜਮ੍ਹਾਂਬੰਦੀ / ਫ਼ਰਦ", "ਬੈਂਕ ਪਾਸਬੁੱਕ (IFSC ਕੋਡ)", "ਮੋਬਾਈਲ ਨੰਬਰ"],
+      "mr": ["आधार कार्ड", "७/१२ उतारा आणि ८-अ नोंद", "बँक पासबुक (IFSC कोड)", "सक्रिय मोबाईल क्रमांक"]
+    },
+    "official_portal": "https://pmkisan.gov.in",
+    "helpline": "155261 / 011-24300606"
+  },
+  {
+    "id": "pmfby",
+    "badge": "Risk Protection",
+    "category": "Insurance",
+    "name": {
+      "en": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "hi": "प्रधानमंत्री फसल बीमा योजना (PMFBY)",
+      "pa": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਫ਼ਸਲ ਬੀਮਾ ਯੋਜਨਾ (PMFBY)",
+      "mr": "प्रधानमंत्री पीक विमा योजना (PMFBY)"
+    },
+    "summary": {
+      "en": "Comprehensive risk insurance for crop loss due to non-preventable natural calamities (drought, flood, unseasonal rain, pests).",
+      "hi": "प्राकृतिक आपदाओं (सूखा, बाढ़, ओलावृष्टि, बेमौसम बारिश, कीट प्रकोप) से फसल नुकसान की स्थिति में संपूर्ण बीमा सुरक्षा।",
+      "pa": "ਕੁਦਰਤੀ ਆਫ਼ਤਾਂ (ਸੋਕਾ, ਹੜ੍ਹ, ਗੜੇਮਾਰੀ, ਬੇਮੌਸਮੀ ਮੀਂਹ) ਕਾਰਨ ਫ਼ਸਲ ਦੇ ਨੁਕਸਾਨ ਲਈ ਵਿਆਪਕ ਬੀਮਾ ਸੁਰੱਖਿਆ।",
+      "mr": "नैसर्गिक आपत्तींमुळे (दुष्काळ, पूर, गारपीट, अवकाळी पाऊस) होणाऱ्या पिकांच्या नुकसानीसाठी सर्वसमावेशक विमा संरक्षण."
+    },
+    "benefits": {
+      "en": [
+        "Very low farmer premium: 2% for Kharif, 1.5% for Rabi, 5% for Commercial/Horticulture crops",
+        "Remaining premium subsidized jointly by Central and State Governments",
+        "Coverage from pre-sowing till post-harvest losses"
+      ],
+      "hi": [
+        "किसानों के लिए बहुत कम प्रीमियम: खरीफ 2%, रबी 1.5%, वाणिज्यिक/बागवानी फसलें 5%",
+        "बाकी प्रीमियम केंद्र और राज्य सरकार द्वारा वहन",
+        "बुवाई पूर्व से लेकर कटाई के बाद के नुकसान तक व्यापक कवरेज"
+      ],
+      "pa": [
+        "ਕਿਸਾਨਾਂ ਲਈ ਬਹੁਤ ਘੱਟ ਪ੍ਰੀਮੀਅਮ: ਖ਼ਰੀਫ਼ 2%, ਰਬੀ 1.5%, ਵਪਾਰਕ ਫ਼ਸਲਾਂ 5%",
+        "ਬਾਕੀ ਪ੍ਰੀਮੀਅਮ ਸਰਕਾਰ ਵੱਲੋਂ ਸਬਸਿਡੀ",
+        "ਬਿਜਾਈ ਤੋਂ ਲੈ ਕੇ ਕਟਾਈ ਤੋਂ ਬਾਅਦ ਤੱਕ ਪੂਰੀ ਸੁਰੱਖਿਆ"
+      ],
+      "mr": [
+        "अतिशय कमी शेतकरी हप्ता: खरीप २%, रब्बी १.५%, बागायती ५%",
+        "उर्वरित हप्ता सरकारकडून अनुदानित",
+        "पेरणीपूर्व ते काढणीनंतरच्या नुकसानीपर्यंत संरक्षण"
+      ]
+    },
+    "eligibility": {
+      "en": ["All farmers growing notified crops in notified areas", "Both loanee and non-loanee farmers eligible", "Sharecroppers and tenant farmers also eligible"],
+      "hi": ["अधिसूचित क्षेत्रों में अधिसूचित फसलें उगाने वाले सभी किसान", "ऋणी (Loanee) और गैर-ऋणी दोनों किसान पात्र", "बटाईदार और किराएदार किसान भी शामिल"],
+      "pa": ["ਨੋਟੀਫਾਈਡ ਇਲਾਕਿਆਂ ਵਿੱਚ ਫ਼ਸਲ ਉਗਾਉਣ ਵਾਲੇ ਸਾਰੇ ਕਿਸਾਨ", "ਕਰਜ਼ਦਾਰ ਅਤੇ ਗ਼ੈਰ-ਕਰਜ਼ਦਾਰ ਦੋਵੇਂ ਯੋਗ", "ਹਿੱਸੇਦਾਰ ਅਤੇ ਪਟੇਦਾਰ ਕਿਸਾਨ ਵੀ ਸ਼ਾਮਲ"],
+      "mr": ["अधिसूचित भागातील अधिसूचित पिके घेणारे सर्व शेतकरी", "कर्जदार आणि बिगर कर्जदार शेतकरी पात्र", "कुळ आणि भाडेकरू शेतकरी देखील पात्र"]
+    },
+    "documents": {
+      "en": ["Aadhaar Card", "Land Possession Certificate / Sowing Certificate", "Bank Account Details", "Crop Sowing Declaration"],
+      "hi": ["आधार कार्ड", "भूमि अधिकार प्रमाण पत्र / खसरा-खतौनी", "फसल बुवाई स्व-घोषणा पत्र", "बैंक पासबुक"],
+      "pa": ["ਆਧਾਰ ਕਾਰਡ", "ਜ਼ਮੀਨ ਦੀ ਫ਼ਰਦ / ਬਿਜਾਈ ਸਰਟੀਫਿਕੇਟ", "ਬੈਂਕ ਖਾਤਾ ਵੇਰਵੇ", "ਫ਼ਸਲ ਘੋਸ਼ਣਾ ਪੱਤਰ"],
+      "mr": ["आधार कार्ड", "७/१२ आणि पीक पाहणी नोंद", "बँक पासबुक", "पीक पेरणी स्वयंघोषणा पत्र"]
+    },
+    "official_portal": "https://pmfby.gov.in",
+    "helpline": "14447 / 1800-180-1551"
+  },
+  {
+    "id": "kcc",
+    "badge": "Credit Facility",
+    "category": "Financial Support",
+    "name": {
+      "en": "Kisan Credit Card (KCC) Scheme",
+      "hi": "किसान क्रेडिट कार्ड (KCC) योजना",
+      "pa": "ਕਿਸਾਨ ਕ੍ਰੈਡਿਟ ਕਾਰਡ (KCC) ਸਕੀਮ",
+      "mr": "किसान क्रेडिट कार्ड (KCC) योजना"
+    },
+    "summary": {
+      "en": "Institutional credit up to ₹3 Lakh at an effective interest rate of just 4% per annum for prompt repayment.",
+      "hi": "समय पर भुगतान करने पर सिर्फ 4% की रियायती वार्षिक ब्याज दर पर ₹3 लाख तक का आसान कृषि ऋण।",
+      "pa": "ਸਮੇਂ ਸਿਰ ਭੁਗਤਾਨ ਕਰਨ 'ਤੇ ਸਿਰਫ਼ 4% ਸਾਲਾਨਾ ਵਿਆਜ ਦਰ 'ਤੇ ₹3 ਲੱਖ ਤੱਕ ਦਾ ਖੇਤੀ ਕਰਜ਼ਾ।",
+      "mr": "वेळेवर परतफेड केल्यास केवळ ४% वार्षिक व्याजदराने ₹३ लाखांपर्यंत सुलभ कृषी कर्ज."
+    },
+    "benefits": {
+      "en": [
+        "Subsidized loan interest (7% normal, reduced to 4% with timely repayment incentive)",
+        "No collateral required for loans up to ₹1.60 Lakh",
+        "Includes crop cultivation, post-harvest expenses and maintenance of farm assets"
+      ],
+      "hi": [
+        "रियायती ब्याज दर (7% सामान्य दर, समय पर चुकाने पर 3% अतिरिक्त छूट = मात्र 4%)",
+        "₹1.60 लाख तक के ऋण पर किसी प्रकार की जमानत/बंधक (Collateral) की जरूरत नहीं",
+        "फसल उत्पादन, पशुपालन और डेयरी गतिविधियों के लिए भी मान्य"
+      ],
+      "pa": [
+        "ਸਬਸਿਡੀ ਵਾਲੀ ਵਿਆਜ ਦਰ (ਸਮੇਂ ਸਿਰ ਭਰਨ 'ਤੇ ਸਿਰਫ 4%)",
+        "₹1.60 ਲੱਖ ਤੱਕ ਬਿਨਾਂ ਗਰੰਟੀ ਤੋਂ ਕਰਜ਼ਾ",
+        "ਫ਼ਸਲਾਂ, ਪਸ਼ੂ ਪਾਲਣ ਅਤੇ ਡੇਅਰੀ ਲਈ ਵੀ ਵਰਤੋਂ ਯੋਗ"
+      ],
+      "mr": [
+        "सवलतीचा व्याजदर (वेळेवर परतफेड केल्यास फक्त ४%)",
+        "₹१.६० लाखांपर्यंत विनातारण कर्ज",
+        "पीक उत्पादन, पशुसंवर्धन आणि दुग्ध व्यवसायासाठी देखील उपलब्ध"
+      ]
+    },
+    "eligibility": {
+      "en": ["Owner cultivators", "Tenant farmers, oral lessees and sharecroppers", "SHGs or Joint Liability Groups of farmers"],
+      "hi": ["व्यक्तिगत भूमि स्वामी किसान", "बटाईदार किसान और काश्तकार", "स्वयं सहायता समूह (SHG) या संयुक्त देयता समूह (JLG)"],
+      "pa": ["ਜ਼ਮੀਨ ਮਾਲਕ ਕਿਸਾਨ", "ਪਟੇਦਾਰ ਅਤੇ ਹਿੱਸੇਦਾਰ ਕਿਸਾਨ", "ਸੈਲਫ ਹੈਲਪ ਗਰੁੱਪ"],
+      "mr": ["स्वतः शेती करणारे मालक शेतकरी", "भाडेकरू व कुळ शेतकरी", "बचत गट व संयुक्त उत्तरदायित्व गट"]
+    },
+    "documents": {
+      "en": ["Application Form", "Identity & Address Proof (Aadhaar/Voter ID)", "Land Record documents", "Passport-size photos"],
+      "hi": ["केसीसी आवेदन फॉर्म", "पहचान व पते का प्रमाण (आधार कार्ड/वोटर आईडी)", "जमीन के कागजात (खतौनी/खसरा)", "पासपोर्ट साइज फोटो"],
+      "pa": ["ਅਰਜ਼ੀ ਫਾਰਮ", "ਆਧਾਰ ਕਾਰਡ / ਵੋਟਰ ਕਾਰਡ", "ਜ਼ਮੀਨ ਦਾ ਰਿਕਾਰਡ", "ਫੋਟੋ"],
+      "mr": ["अर्ज", "ओळख व पत्त्याचा पुरावा", "७/१२ व ८-अ उतारा", "पासपोर्ट फोटो"]
+    },
+    "official_portal": "https://myscheme.gov.in/schemes/kcc",
+    "helpline": "1800-115-526"
+  },
+  {
+    "id": "pmksy",
+    "badge": "Water & Irrigation",
+    "category": "Irrigation",
+    "name": {
+      "en": "PM Krishi Sinchayee Yojana (Per Drop More Crop)",
+      "hi": "प्रधानमंत्री कृषि सिंचाई योजना (प्रति बूंद अधिक फसल)",
+      "pa": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਕ੍ਰਿਸ਼ੀ ਸਿੰਚਾਈ ਯੋਜਨਾ",
+      "mr": "पंतप्रधान कृषी सिंचन योजना"
+    },
+    "summary": {
+      "en": "Subsidy up to 55% for small/marginal farmers and 45% for other farmers on micro-irrigation systems (Drip and Sprinkler).",
+      "hi": "ड्रिप और स्प्रिंकलर (फव्वारा) सिंचाई प्रणालियों की स्थापना पर 45% से 55% (कई राज्यों में 70-80% तक) की भारी सब्सिडी।",
+      "pa": "ਡ੍ਰਿਪ ਅਤੇ ਸਪ੍ਰਿੰਕਲਰ ਸਿੰਚਾਈ ਸਿਸਟਮ ਲਗਾਉਣ 'ਤੇ 55% ਤੱਕ ਦੀ ਸਬਸਿਡੀ।",
+      "mr": "ठिबक आणि तुषार सिंचन पद्धती बसवण्यासाठी ५५% ते ८०% पर्यंत शासकीय अनुदान."
+    },
+    "benefits": {
+      "en": [
+        "Saves up to 40-50% water compared to conventional flood irrigation",
+        "Increases crop yield by 20-30% through uniform moisture & fertigation",
+        "Huge subsidy disbursed directly to beneficiary / system installer"
+      ],
+      "hi": [
+        "पारंपरिक सिंचाई की तुलना में 40-50% पानी की बचत",
+        "संतुलित नमी और खाद मिलने से पैदावार में 20-30% की वृद्धि",
+        "सरकारी पोर्टल के माध्यम से पारदर्शी सब्सिडी भुगतान"
+      ],
+      "pa": [
+        "40-50% ਪਾਣੀ ਦੀ ਬਚਤ",
+        "ਪੈਦਾਵਾਰ ਵਿੱਚ 20-30% ਵਾਧਾ",
+        "ਸਿੱਧੀ ਸਬਸਿਡੀ ਸਹਾਇਤਾ"
+      ],
+      "mr": [
+        "पाण्याची ४०-५०% बचत",
+        "उत्पादनात २०-३०% वाढ",
+        "पारदर्शक थेट अनुदान वितरण"
+      ]
+    },
+    "eligibility": {
+      "en": ["Farmers having cultivable land with assured water source (borewell/canal/well)", "Valid land ownership documents"],
+      "hi": ["खेती योग्य जमीन और सुनिश्चित जल स्रोत (बोरवेल/कुआं/नहर) वाले किसान", "वैध भूमि स्वामित्व रिकॉर्ड"],
+      "pa": ["ਸਿੰਚਾਈ ਸਾਧਨ ਅਤੇ ਵਾਹੀਯੋਗ ਜ਼ਮੀਨ ਵਾਲੇ ਕਿਸਾਨ", "ਜ਼ਮੀਨ ਦੇ ਦਸਤਾਵੇਜ਼"],
+      "mr": ["शेतीयोग्य जमीन व सिंचनासाठी पाण्याचा शाश्वत स्त्रोत असणारे शेतकरी"]
+    },
+    "documents": {
+      "en": ["Aadhaar Card", "Land Records (7/12, Khatauni)", "Electricity connection / Water source proof", "Bank Passbook"],
+      "hi": ["आधार कार्ड", "खतौनी / खसरा नकल", "बिजली कनेक्शन / जल स्रोत प्रमाण", "बैंक पासबुक"],
+      "pa": ["ਆਧਾਰ ਕਾਰਡ", "ਜ਼ਮੀਨ ਦੀ ਫ਼ਰਦ", "ਬਿਜਲੀ ਕੁਨੈਕਸ਼ਨ / ਪਾਣੀ ਦਾ ਸਬੂਤ", "ਬੈਂਕ ਪਾਸਬੁੱਕ"],
+      "mr": ["आधार कार्ड", "७/१२ उतारा", "विद्युत जोडणी किंवा पाणी स्त्रोत प्रमाणपत्र", "बँक पासबुक"]
+    },
+    "official_portal": "https://pmksy.gov.in",
+    "helpline": "011-23381012"
+  },
+  {
+    "id": "smam",
+    "badge": "Machinery",
+    "category": "Equipment & Tech",
+    "name": {
+      "en": "Sub-Mission on Agricultural Mechanization (SMAM)",
+      "hi": "कृषि यंत्रीकरण उप-मिशन (SMAM - कृषि यंत्र सब्सिडी)",
+      "pa": "ਖੇਤੀਬਾੜੀ ਮਸ਼ੀਨੀਕਰਨ ਸਬ-ਮਿਸ਼ਨ (SMAM)",
+      "mr": "कृषी यांत्रिकीकरण उप-अभियान (SMAM)"
+    },
+    "summary": {
+      "en": "Financial assistance of 40% to 50% on purchase of modern agricultural machinery such as Rotavators, Happy Seeders, Tractors, and Sprayers.",
+      "hi": "रोटावेटर, हैप्पी सीडर, ट्रैक्टर, लेजर लैंड लेवलर और आधुनिक स्प्रेयर खरीदने पर 40% से 50% तक सरकारी सब्सिडी।",
+      "pa": "ਰੋਟਾਵੇਟਰ, ਹੈਪੀ ਸੀਡਰ, ਟਰੈਕਟਰ ਅਤੇ ਆਧੁਨਿਕ ਖੇਤੀ ਸੰਦਾਂ 'ਤੇ 40% ਤੋਂ 50% ਤੱਕ ਦੀ ਸਬਸਿਡੀ।",
+      "mr": "रोटाव्हेटर, ट्रॅक्टर, पेरणी यंत्र आणि फवारणी उपकरणांच्या खरेदीवर ४०% ते ५०% पर्यंत अनुदान."
+    },
+    "benefits": {
+      "en": [
+        "Up to 50% subsidy for SC/ST/Small/Marginal and Women farmers",
+        "Reduces labor cost and drudgery in farming",
+        "Custom Hiring Centres (CHC) subsidy up to 40% (₹10-24 Lakh) for rural youth"
+      ],
+      "hi": [
+        "अनुसूचित जाति/जनजाति, लघु-सीमांत और महिला किसानों के लिए 50% तक सब्सिडी",
+        "मजदूरी के खर्च में कमी और समय की बचत",
+        "कस्टम हायरिंग सेंटर (CHC) खोलने पर 40% तक (₹10 से 24 लाख तक) की वित्तीय मदद"
+      ],
+      "pa": [
+        "ਛੋਟੇ ਕਿਸਾਨਾਂ ਅਤੇ ਔਰਤਾਂ ਲਈ 50% ਤੱਕ ਛੋਟ",
+        "ਮਜ਼ਦੂਰੀ ਖਰਚੇ ਵਿੱਚ ਭਾਰੀ ਬਚਤ",
+        "ਕਸਟਮ ਹਾਇਰਿੰਗ ਸੈਂਟਰ ਲਈ ਵੱਡੀ ਸਬਸਿਡੀ"
+      ],
+      "mr": [
+        "लहान व महिला शेतकऱ्यांना ५०% पर्यंत अनुदान",
+        "मजुरी खर्चात मोठी बचत",
+        "कस्टम हायरिंग सेंटरसाठी विशेष अनुदान"
+      ]
+    },
+    "eligibility": {
+      "en": ["Resident farmers with landholding records", "Farmer should not have availed subsidy for the same equipment in past 3-5 years"],
+      "hi": ["खेतीहर किसान जिनके पास कृषि भूमि रिकॉर्ड हो", "किसान ने पिछले 3-5 वर्षों में उसी यंत्र पर सरकारी अनुदान न लिया हो"],
+      "pa": ["ਜ਼ਮੀਨ ਮਾਲਕ ਕਿਸਾਨ", "ਪਿਛਲੇ 3-5 ਸਾਲਾਂ ਵਿੱਚ ਇਸ ਸੰਦ 'ਤੇ ਸਬਸਿਡੀ ਨਾ ਲਈ ਹੋਵੇ"],
+      "mr": ["जमिनीची नोंद असलेले शेतकरी", "गेल्या ३ ते ५ वर्षांत त्याच अवजारावर अनुदान न घेतलेले"]
+    },
+    "documents": {
+      "en": ["Aadhaar Card", "Land Records (RoR/Khatauni)", "Bank Passbook", "Caste Certificate (if applicable)"],
+      "hi": ["आधार कार्ड", "खसरा/खतौनी की नकल", "बैंक पासबुक", "जाति प्रमाण पत्र (यदि लागू हो)"],
+      "pa": ["ਆਧਾਰ ਕਾਰਡ", "ਜ਼ਮੀਨ ਦੀ ਫ਼ਰਦ", "ਬੈਂਕ ਪਾਸਬੁੱਕ", "ਜਾਤੀ ਸਰਟੀਫਿਕੇਟ"],
+      "mr": ["आधार कार्ड", "७/१२ नोंद", "बँक पासबुक", "जातीचे प्रमाणपत्र (लागू असल्यास)"]
+    },
+    "official_portal": "https://agrimachinery.nic.in",
+    "helpline": "1800-180-1551"
+  }
+]

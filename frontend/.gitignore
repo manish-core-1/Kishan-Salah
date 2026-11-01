@@ -1,0 +1,44 @@
+# ==============================================================================
+# Kisan Salah Frontend - Git Ignore Rules
+# ==============================================================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js build outputs
+.next/
+out/
+build/
+dist/
+
+# Local env files & secrets
+.env
+.env*.local
+*.env
+!.env.example
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Logs & Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel/
+
+# OS & Editor
+.DS_Store
+*.pem
+.vscode/
+.idea/
