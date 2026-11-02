@@ -15,9 +15,10 @@ from app.services.ai_service import (
     transcribe_audio_with_groq
 )
 
-router = APIRouter(prefix="/api/advisor", tags=["Kisan AI Advisor"])
+router = APIRouter(tags=["Kisan AI Advisor"])
 
 @router.post("/query", response_model=AdvisorResponse)
+@router.post("/query/", response_model=AdvisorResponse, include_in_schema=False)
 def get_farmer_advice(payload: AdvisorRequest):
     """
     Kisan AI Advisor Endpoint:
@@ -34,6 +35,7 @@ def get_farmer_advice(payload: AdvisorRequest):
     return AdvisorResponse(**result)
 
 @router.post("/market-recommendation", response_model=MarketRecommendationResponse)
+@router.post("/market-recommendation/", response_model=MarketRecommendationResponse, include_in_schema=False)
 def get_post_market_recommendation(payload: MarketRecommendationRequest):
     """
     3-Way Market Sell Recommendation Engine (POST):
@@ -52,6 +54,7 @@ def get_post_market_recommendation(payload: MarketRecommendationRequest):
     return MarketRecommendationResponse(**res)
 
 @router.get("/market-recommendation", response_model=MarketRecommendationResponse)
+@router.get("/market-recommendation/", response_model=MarketRecommendationResponse, include_in_schema=False)
 def get_market_recommendation_by_query(
     commodity: str = Query("Potato", description="Commodity name (e.g. 'Potato', 'Mustard', 'Wheat')"),
     location: Optional[str] = Query(None, description="Farmer's location or district"),
@@ -73,6 +76,7 @@ def get_market_recommendation_by_query(
     return MarketRecommendationResponse(**res)
 
 @router.post("/voice-to-text", response_model=VoiceToTextResponse)
+@router.post("/voice-to-text/", response_model=VoiceToTextResponse, include_in_schema=False)
 async def speech_to_text(
     file: UploadFile = File(...),
     language: str = Form("hi")
@@ -94,6 +98,7 @@ async def speech_to_text(
     return VoiceToTextResponse(**result)
 
 @router.post("/voice-to-text-base64", response_model=VoiceToTextResponse)
+@router.post("/voice-to-text-base64/", response_model=VoiceToTextResponse, include_in_schema=False)
 def speech_to_text_base64(payload: VoiceToTextBase64Request):
     """
     Base64 Voice-to-Text Endpoint:

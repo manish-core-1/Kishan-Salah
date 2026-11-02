@@ -26,11 +26,28 @@ app.add_middleware(
     expose_headers=["*"],
 )
 
-# Register routers
-app.include_router(mandi.router)
-app.include_router(weather.router)
-app.include_router(schemes.router)
-app.include_router(advisory.router)
+@app.middleware("http")
+async def normalize_api_path(request, call_next):
+    # Normalize duplicate /api prefixes, e.g. /api/api/mandi -> /api/mandi
+    path = request.scope.get("path", "")
+    while path.startswith("/api/api/"):
+        path = path[4:]
+        request.scope["path"] = path
+    return await call_next(request)
+
+# Register routers under both /api/... and direct /... prefixes
+# This guarantees 100% compatibility regardless of whether Vercel or frontend prefixes with /api
+app.include_router(mandi.router, prefix="/api/mandi", tags=["Mandi Bhav"])
+app.include_router(mandi.router, prefix="/mandi", tags=["Mandi Bhav (Vercel Direct)"], include_in_schema=False)
+
+app.include_router(weather.router, prefix="/api/weather", tags=["Weather Advisory"])
+app.include_router(weather.router, prefix="/weather", tags=["Weather Advisory (Vercel Direct)"], include_in_schema=False)
+
+app.include_router(schemes.router, prefix="/api/schemes", tags=["Govt Schemes"])
+app.include_router(schemes.router, prefix="/schemes", tags=["Govt Schemes (Vercel Direct)"], include_in_schema=False)
+
+app.include_router(advisory.router, prefix="/api/advisor", tags=["Kisan AI Advisor"])
+app.include_router(advisory.router, prefix="/advisor", tags=["Kisan AI Advisor (Vercel Direct)"], include_in_schema=False)
 
 @app.get("/")
 @app.get("/api")

@@ -27,13 +27,20 @@ export const SchemesWidget: React.FC<SchemesWidgetProps> = ({ currentLang }) => 
   const [searchTerm, setSearchTerm] = useState("");
   const [activeModal, setActiveModal] = useState<SchemeItem | null>(null);
   const [loading, setLoading] = useState(true);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const categories = ["All", "Financial Support", "Insurance", "Irrigation", "Equipment & Tech"];
 
   const loadData = useCallback(() => {
     setLoading(true);
+    setErrorMsg(null);
     fetchSchemes(selectedCategory, searchTerm)
       .then((data) => setSchemes(data))
+      .catch((err: unknown) => {
+        const msg = err instanceof Error ? err.message : "सरकारी योजनाएं लोड करने में समस्या आई।";
+        setErrorMsg(msg);
+        setSchemes([]);
+      })
       .finally(() => setLoading(false));
   }, [selectedCategory, searchTerm]);
 
@@ -98,6 +105,16 @@ export const SchemesWidget: React.FC<SchemesWidgetProps> = ({ currentLang }) => 
           <div className="py-12 text-center text-emerald-800">
             <div className="w-8 h-8 border-3 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
             <p className="font-medium text-sm">{t.loading}</p>
+          </div>
+        ) : errorMsg ? (
+          <div className="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-center">
+            <p className="font-bold text-sm">{errorMsg}</p>
+            <button
+              onClick={loadData}
+              className="mt-3 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold rounded-xl cursor-pointer"
+            >
+              पुनः प्रयास करें
+            </button>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

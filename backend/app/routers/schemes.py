@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from app.models.schemas import SchemeRecord
 
-router = APIRouter(prefix="/api/schemes", tags=["Govt Schemes"])
+router = APIRouter(tags=["Govt Schemes"])
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "schemes_data.json"
 
@@ -15,6 +15,7 @@ def load_data() -> List[dict]:
         return json.load(f)
 
 @router.get("", response_model=List[SchemeRecord])
+@router.get("/", response_model=List[SchemeRecord], include_in_schema=False)
 def get_schemes(
     category: Optional[str] = Query(None, description="Category filter"),
     search: Optional[str] = Query(None, description="Keyword search in any language")
@@ -43,12 +44,14 @@ def get_schemes(
     return filtered
 
 @router.get("/categories")
+@router.get("/categories/", include_in_schema=False)
 def get_categories():
     data = load_data()
     cats = sorted(list(set(d["category"] for d in data)))
     return ["All"] + cats
 
 @router.get("/{scheme_id}", response_model=SchemeRecord)
+@router.get("/{scheme_id}/", response_model=SchemeRecord, include_in_schema=False)
 def get_scheme_by_id(scheme_id: str):
     data = load_data()
     for item in data:

@@ -1,6 +1,38 @@
-const rawBaseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-// Ensure no trailing slash so path concatenation never forms invalid '//api'
-const API_BASE_URL = rawBaseUrl.replace(/\/+$/, "");
+const rawBaseUrl = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").trim();
+// Strip trailing slashes
+let cleanBaseUrl = rawBaseUrl.replace(/\/+$/, "");
+// If the user configured NEXT_PUBLIC_API_URL with a trailing '/api', strip it
+// so concatenating '/api/...' does not produce duplicate '/api/api/...'
+if (cleanBaseUrl.endsWith("/api")) {
+  cleanBaseUrl = cleanBaseUrl.slice(0, -4).replace(/\/+$/, "");
+}
+export const API_BASE_URL = cleanBaseUrl;
+
+async function parseErrorResponse(res: Response, endpoint: string): Promise<Error> {
+  let detail = "";
+  try {
+    const errorData = await res.json();
+    if (typeof errorData === "string") {
+      detail = errorData;
+    } else if (errorData && typeof errorData.detail === "string") {
+      detail = errorData.detail;
+    } else if (errorData && typeof errorData.message === "string") {
+      detail = errorData.message;
+    }
+  } catch {
+    try {
+      const text = await res.text();
+      if (text && text.length < 150) {
+        detail = text.trim();
+      }
+    } catch {
+      // ignore
+    }
+  }
+
+  const detailText = detail ? ` - ${detail}` : "";
+  return new Error(`[HTTP ${res.status}] Endpoint ${endpoint} failed${detailText}`);
+}
 
 export interface MandiItem {
   id: string;
@@ -113,9 +145,7 @@ export async function fetchMandiPrices(params?: {
 
   const res = await fetch(url.toString(), { cache: "no-store" });
   if (!res.ok) {
-    const errorData = await res.json().catch(() => ({}));
-    const message = errorData.detail || `Server returned HTTP ${res.status}`;
-    throw new Error(message);
+    throw await parseErrorResponse(res, "/api/mandi");
   }
   return await res.json();
 }
@@ -127,9 +157,7 @@ export async function fetchWeather(location: string = "Prayagraj", state?: strin
 
   const res = await fetch(url.toString(), { cache: "no-store" });
   if (!res.ok) {
-    const errorData = await res.json().catch(() => ({}));
-    const message = errorData.detail || `Weather server returned HTTP ${res.status}`;
-    throw new Error(message);
+    throw await parseErrorResponse(res, "/api/weather");
   }
   return await res.json();
 }
@@ -140,7 +168,9 @@ export async function fetchSchemes(category?: string, search?: string): Promise<
   if (search) url.searchParams.append("search", search);
 
   const res = await fetch(url.toString(), { cache: "no-store" });
-  if (!res.ok) throw new Error("Failed to fetch schemes");
+  if (!res.ok) {
+    throw await parseErrorResponse(res, "/api/schemes");
+  }
   return await res.json();
 }
 
@@ -150,7 +180,9 @@ export async function queryAdvisor(queryText: string, language: string = "hi", l
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query: queryText, language, location })
   });
-  if (!res.ok) throw new Error("Advisor API failed");
+  if (!res.ok) {
+    throw await parseErrorResponse(res, "/api/advisor/query");
+  }
   return await res.json();
 }
 
@@ -169,7 +201,9 @@ export async function fetchMarketRecommendation(params: {
   if (params.language) url.searchParams.append("language", params.language);
 
   const res = await fetch(url.toString(), { cache: "no-store" });
-  if (!res.ok) throw new Error("Failed to fetch market recommendation");
+  if (!res.ok) {
+    throw await parseErrorResponse(res, "/api/advisor/market-recommendation");
+  }
   return await res.json();
 }
 
@@ -194,8 +228,7 @@ export async function transcribeAudio(
   });
 
   if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.detail || "Voice-to-Text conversion failed");
+    throw await parseErrorResponse(res, "/api/advisor/voice-to-text");
   }
 
   return await res.json();

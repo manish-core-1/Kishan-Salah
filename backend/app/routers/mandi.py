@@ -3,9 +3,10 @@ from typing import List, Optional
 from app.models.schemas import MandiRecord
 from app.services.agmarknet import fetch_agmarknet_data
 
-router = APIRouter(prefix="/api/mandi", tags=["Mandi Bhav"])
+router = APIRouter(tags=["Mandi Bhav"])
 
 @router.get("", response_model=List[MandiRecord])
+@router.get("/", response_model=List[MandiRecord], include_in_schema=False)
 def get_mandi_prices(
     state: Optional[str] = Query(None, description="Filter by State (e.g., 'Uttar Pradesh', 'Punjab')"),
     commodity: Optional[str] = Query(None, description="Filter by Commodity (e.g., 'Tomato', 'Wheat')"),
@@ -30,6 +31,7 @@ def get_mandi_prices(
     return records
 
 @router.get("/filters")
+@router.get("/filters/", include_in_schema=False)
 def get_filters():
     """
     Returns available standard states and popular commodities for UI dropdowns.
@@ -84,6 +86,7 @@ def get_filters():
     }
 
 @router.get("/summary")
+@router.get("/summary/", include_in_schema=False)
 def get_mandi_summary():
     """
     Returns high-level summary of live commodities from Data.gov.in.

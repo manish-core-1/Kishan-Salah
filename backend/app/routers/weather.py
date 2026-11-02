@@ -3,7 +3,7 @@ from typing import Optional, List, Dict
 from app.models.schemas import WeatherResponse
 from app.services.weather_service import fetch_open_meteo_forecast
 
-router = APIRouter(prefix="/api/weather", tags=["Weather Advisory"])
+router = APIRouter(tags=["Weather Advisory"])
 
 POPULAR_AGRI_DISTRICTS = [
     {"name": "Prayagraj", "state": "Uttar Pradesh", "label": "Prayagraj (प्रयागराज)"},
@@ -19,6 +19,7 @@ POPULAR_AGRI_DISTRICTS = [
 ]
 
 @router.get("", response_model=WeatherResponse)
+@router.get("/", response_model=WeatherResponse, include_in_schema=False)
 def get_weather(
     location: str = Query("Prayagraj", description="District or city name (e.g., 'Prayagraj')"),
     state: Optional[str] = Query("Uttar Pradesh", description="State name (e.g., 'Uttar Pradesh')"),
@@ -37,6 +38,7 @@ def get_weather(
     return data
 
 @router.get("/locations")
+@router.get("/locations/", include_in_schema=False)
 def get_popular_locations():
     """
     Returns popular agricultural districts list for the UI selector.
