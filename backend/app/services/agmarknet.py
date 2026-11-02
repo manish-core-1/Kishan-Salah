@@ -60,7 +60,7 @@ def get_api_key() -> str:
     if not key:
         raise HTTPException(
             status_code=500,
-            detail="DATA_GOV_API_KEY is not configured in the backend .env file. Please configure the key to fetch live data."
+            detail="DATA_GOV_API_KEY is not configured. Please add DATA_GOV_API_KEY in Vercel Environment Variables or your .env file."
         )
     return key
 
@@ -150,7 +150,7 @@ def fetch_agmarknet_data(
     elif response.status_code in (401, 403):
         raise HTTPException(
             status_code=403,
-            detail="Unauthorized: Please verify that DATA_GOV_API_KEY in .env is valid."
+            detail="Unauthorized: Please verify that DATA_GOV_API_KEY is valid."
         )
     elif response.status_code >= 500:
         raise HTTPException(

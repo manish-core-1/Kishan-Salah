@@ -856,7 +856,7 @@ def transcribe_audio_with_groq(
 
     api_key = os.getenv("GROQ_API_KEY", "").strip()
     if not api_key:
-        raise HTTPException(status_code=500, detail="GROQ_API_KEY is not configured in .env")
+        raise HTTPException(status_code=500, detail="GROQ_API_KEY is not configured. Please configure GROQ_API_KEY in Vercel Environment Variables or your .env file.")
 
     url = "https://api.groq.com/openai/v1/audio/transcriptions"
     headers = {"Authorization": f"Bearer {api_key}"}
