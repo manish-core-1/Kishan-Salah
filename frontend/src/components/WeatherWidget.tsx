@@ -201,14 +201,37 @@ export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ currentLang }) => 
         <div className="p-6">
           <div className="py-6 px-6 bg-rose-50 border border-rose-200 rounded-xl text-rose-800 flex items-start space-x-3">
             <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-rose-600" />
-            <div>
-              <p className="font-bold text-sm">मौसम डेटा लोड करने में त्रुटि:</p>
+            <div className="flex-1">
+              <p className="font-bold text-sm">मौसम डेटा लोड करने में समस्या:</p>
               <p className="text-xs text-rose-700 mt-1">{errorMsg}</p>
+              <button
+                type="button"
+                onClick={() => {
+                  const item = PRESET_DISTRICTS.find((p) => p.key === selectedKey);
+                  if (item) loadWeather(item.location, item.state);
+                  else if (customSearch.trim()) loadWeather(customSearch.trim());
+                  else loadWeather("Prayagraj", "Uttar Pradesh");
+                }}
+                className="mt-3 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-semibold inline-flex items-center space-x-1.5 transition-colors cursor-pointer shadow-sm"
+              >
+                <RefreshCw className="w-3.5 h-3.5" />
+                <span>पुनः प्रयास करें (Retry)</span>
+              </button>
             </div>
           </div>
         </div>
       ) : !weather ? null : (
         <div className="p-6 space-y-6">
+          {/* Stale Cache Notice Banner if Upstream is Overloaded */}
+          {weather.is_stale && weather.warning && (
+            <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs flex items-center space-x-2">
+              <AlertCircle className="w-4 h-4 text-amber-700 shrink-0" />
+              <span>
+                <strong>सूचना:</strong> {weather.warning} (अंतिम अद्यतन: {weather.fetched_at})
+              </span>
+            </div>
+          )}
+
           {/* Metadata Ribbon (Source, Coordinates, 30m Cache Status) */}
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-gray-500 border-b border-gray-100 pb-3">
             <div className="flex items-center space-x-3">
@@ -229,7 +252,7 @@ export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ currentLang }) => 
             <div className="flex items-center space-x-2 text-[11px] text-gray-400">
               {weather.cached && (
                 <span className="bg-amber-50 text-amber-800 px-2 py-0.5 rounded font-semibold border border-amber-200">
-                  ⚡ 30m Cache Active
+                  ⚡ {weather.is_stale ? "सत्यापित कैश्ड डेटा" : "30m Cache Active"}
                 </span>
               )}
               <span>अपडेट: {weather.fetched_at || "अभी"}</span>

@@ -61,6 +61,8 @@ class WeatherResponse(BaseModel):
     source: str = "Open-Meteo API"
     fetched_at: Optional[str] = None
     cached: Optional[bool] = False
+    is_stale: Optional[bool] = False
+    warning: Optional[str] = None
     advisory: Dict[str, List[str]]
     forecast: List[WeatherDay]
 

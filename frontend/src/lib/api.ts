@@ -97,6 +97,8 @@ export interface WeatherData {
   source?: string;
   fetched_at?: string;
   cached?: boolean;
+  is_stale?: boolean;
+  warning?: string;
   advisory: Record<string, string[]>;
   forecast: WeatherDay[];
 }
